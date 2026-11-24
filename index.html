@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>할 일</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">✓</span>
+        <h1>할 일</h1>
+      </div>
+      <div class="view-switch" role="tablist" aria-label="보기 방식">
+        <button type="button" role="tab" id="tab-day" data-view="day" aria-selected="false">일별</button>
+        <button type="button" role="tab" id="tab-week" data-view="week" aria-selected="false">주별</button>
+        <button type="button" role="tab" id="tab-month" data-view="month" aria-selected="true">월별</button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="toolbar-copy">
+        <p id="range-label" class="range"></p>
+        <p id="range-meta" class="range-meta"></p>
+      </div>
+      <div class="nav">
+        <button type="button" id="prev" data-shift="-1">이전</button>
+        <button type="button" id="today" data-today>오늘</button>
+        <button type="button" id="next" data-shift="1">다음</button>
+      </div>
+    </div>
+
+    <main id="main">
+      <section id="board"></section>
+      <aside id="detail"></aside>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
